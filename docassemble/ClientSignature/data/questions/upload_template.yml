@@ -454,7 +454,17 @@ subquestion: |
   We sent a copy to ${advocate}. You can also download this file for your records.
   
   ${signed_file}
----  
+
+  % if file_submitted_to_LS:
+  File saved to the LegalServer case as both a PDF and DOCX file. 
+  % else:
+  Error Uploading file to Legalserver.
+  % endif
+---
+code: |
+  add_file_to_LS = post_file_to_legalserver_documents_webhook(legalserver_site=legalserver_site, file_path=zip_file(signed_file.pdf,signed_file.docx, filename='files.zip').path(), legalserver_matter_uuid=legalserver_matter_uuid)
+  file_submitted_to_LS = True
+---
 code: |
   final_fields = get_multiple_fields(the_file)
 ---
