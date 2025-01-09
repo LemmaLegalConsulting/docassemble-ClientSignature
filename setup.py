@@ -56,6 +56,6 @@ setup(name='docassemble.ClientSignature',
       namespace_packages=['docassemble'],
       install_requires=['docassemble.gbls>=0.0.58', 'docassemble.microsoftgraph>=0.0.6'],
       zip_safe=False,
-      package_data=find_package_data(where='docassemble/clientsignature/', package='docassemble.clientsignature'),
+      package_data=find_package_data(where='docassemble/ClientSignature/', package='docassemble.ClientSignature'),
      )
 
