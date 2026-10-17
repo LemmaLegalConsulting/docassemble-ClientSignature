@@ -186,6 +186,7 @@ code: |
   drive_contents.gathered = True
   gathered_file_questions = True
 ---
+id: sign in required
 event: not_signed_in
 question: |
   Please sign-in
